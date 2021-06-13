@@ -1,0 +1,11 @@
+/**
+ * @snippet       Add Prefix to WooCommerce prices
+ * @author        codeithub.com
+  */
+   
+add_filter( 'woocommerce_get_price_html', 'codeithub_add_price_prefix', 99, 2 );
+  
+function codeithub_add_price_prefix( $price, $product ){
+    $price = 'Prefix here ' . $price;
+    return $price;
+}

@@ -1,0 +1,11 @@
+/**
+ * @snippet       Add suffix to WooCommerce prices
+ * @author        codeithub.com
+  */
+   
+add_filter( 'woocommerce_get_price_suffix', 'codeithub_add_price_suffix', 99, 4 );
+  
+function codeithub_add_price_suffix( $html, $product, $price, $qty ){
+    $html .= ' suffix here';
+    return $html;
+}
